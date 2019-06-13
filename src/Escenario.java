@@ -31,7 +31,7 @@ public class Escenario extends Application{
     @Override
     public void start(Stage stage) throws Exception {
     Pane layout= new Pane();
-    Canvas canvas= new Canvas(300,300);
+    Canvas canvas= new Canvas(500,500);
     layout.getChildren().add(canvas);
     Scene escena=new Scene (layout, 300, 300,Color.WHITESMOKE);
     GraphicsContext lapiz= canvas.getGraphicsContext2D();
@@ -40,20 +40,10 @@ public class Escenario extends Application{
     stage.show();
     lapiz.setFill(Color.RED);
     lapiz.setStroke(Color.AQUAMARINE);
-    int x=5;
-    int y=180;
+       
+    Loop loop= new Loop(lapiz);
+    loop.start();
     
-    lapiz.strokeLine(0, 250, 300, 250);
-    //lapiz.strokeRect(30, 30, 80, 60);
-    //lapiz.fillOval(20, 20, 50, 50);
-    lapiz.strokeRect(x, y,180, 20);
-    lapiz.strokeLine(x+15 ,y , x+45, y-50);
-    lapiz.strokeLine(x+45, y-50, x+135,y-50);
-    lapiz.strokeLine(x+135, y-50, x+165,y);
-    lapiz.strokeOval(x+15, y+20, 50, 50);
-    lapiz.strokeOval(x+135,y+20, 50, 50);
-    
-   
     }
         
     }
